@@ -1,0 +1,564 @@
+общие характеристики для вссего сайта - старт*/
+* {
+	margin: 0;
+	padding: 0;
+	/*outline: 1px dotted black;*/
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	font: 100%/1.5em Arial, Tahoma, sans-serif;
+	color: #000;
+	height: 100%;
+	background: url(../img/bg.png);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100%;
+
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+}
+
+a, a:focus, a:hover {
+	text-decoration: none;
+}
+/*общие характеристики для вссего сайта - конец*/
+
+.anchor {
+	position: relative;
+}
+
+
+/*grids - start*/
+
+/*general container rules*/
+.container {
+	width: 90%;
+	margin: 0 auto;
+	height: 100%;
+}
+
+.container .page {
+	height: auto;
+	border-top: 1px dashed red;
+}
+
+.container .cols {
+	float: left;
+	padding: 1em;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+/*clearfix - start*/
+.container:before,
+.container:after,
+.row:before,
+.row:after,
+.clear:before,
+.clear:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+.container:after,
+.row:after,
+.clear:after {
+    clear: both;
+}
+.clear {
+    zoom: 1; /* IE < 8 */
+}
+/*clearfix - end*/
+
+
+/*columns grids - start*/
+/*default grid - mobile first*/
+.container .cols.col-1,
+.container .cols.col-2,
+.container .cols.col-3,
+.container .cols.col-4,
+.container .cols.col-5,
+.container .cols.col-6,
+.container .cols.col-7,
+.container .cols.col-8,
+.container .cols.col-9,
+.container .cols.col-10,
+.container .cols.col-11,
+.container .cols.col-12 {width: 100%;}
+
+
+/*header block - start*/
+
+.header .logo object {  /*Logo img*/
+	width: 50%;
+	height: auto;
+	background-color: rgba(255,255,255,0.7);
+}
+
+/*nav styles - start*/
+.nav li a {
+	margin-bottom: 0.5em;
+	display: block;
+	border: 1px dashed red;
+	color: black;
+	font-weight: bold;
+	background-color: rgba(255,255,255,0.7);
+	text-transform: uppercase;
+}
+
+.nav li a:hover {
+	border: 1px solid red;
+}
+
+.nav.fixed li a:hover {
+	text-decoration: underline;
+}
+
+.nav li a:focus {
+	border: 1px solid red;
+	text-transform: uppercase;
+	background-color: red;
+	color: #fff;
+}
+
+/*nav default styles:*/
+.nav.default .nav5 {
+		display: none; 
+		/*скрытые стрелки в дефолтном виде*/
+}
+
+/*nav fixed styles:*/
+.nav.fixed ul .nav1,
+.nav.fixed ul .nav2,
+.nav.fixed ul .nav3,
+.nav.fixed ul .nav4 {
+	display: none;
+}
+
+.nav.fixed:hover ul .nav1,
+.nav.fixed:hover ul .nav2,
+.nav.fixed:hover ul .nav3,
+.nav.fixed:hover ul .nav4 {
+	display: inline-block;
+}
+
+.nav.fixed {
+	width: 90%;
+	text-align: center;
+	position: fixed;
+	padding: 0;
+	margin: 0;
+}
+
+.nav.fixed  ul {
+	background-color: rgba(255, 0, 0, 0.5);
+	padding: 0;	
+}
+
+.nav.fixed li {
+	margin: 1em;
+	display: inline-block;
+}
+
+.nav.fixed li a {
+	color: #fff;
+	border:none;
+	outline: none;
+	/*font-weight: bolder;*/
+	background: transparent;	
+}
+
+.nav.fixed li a:hover, 
+.nav.fixed li a:focus {
+	border:none;
+	outline: none;	
+}
+
+.nav.fixed .nav5 {
+	display: inline-block;
+}
+
+.nav.fixed .nav5 a {
+	width: 1.5em;
+	height: 1.5em;
+}
+
+.nav.fixed .nav5 a img {
+	width: inherit;
+}
+
+/*header block - end*/
+
+/*характеристика основного содержимого сайта:*/
+
+/*1) отсек постов:*/
+.postBox {
+	background-color: rgba(218,233,186,0.6);
+}
+
+/*характеристика для мобильных устройств - посты - начало*/
+.ifNavFix {
+	margin-top: 2em;
+}
+
+.container .articles {
+	padding: 1em 1em 1em 0;
+	height: 100%;
+}
+
+.container .articles > div{
+	padding: 0;
+	/*height: auto;*/
+}
+
+.articles .article {
+	background-color: #fff;
+	height: 30%;
+	overflow-y: scroll;
+	margin: 0.5em;
+	display: inline-block;
+	float: none;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+/*характеристика для мобильных устройств - посты - конец*/
+
+/*2) отсек галереи:*/
+.galary {
+	background-color: rgba(232,230,161, 0.6);
+}
+
+.fotos img {
+	width: 20%;/*foto in galary size*/
+}
+
+
+/*3) отсек форм обратной связи и карты:*/
+.feedback {
+	background-color: rgba(227,244,247, 0.6);
+}
+
+.feedback form {
+	height: inherit;
+}
+
+.e-mail, .adress {
+	height: inherit;
+	width: 100%;
+	text-align: justify;
+	color: black;
+}
+
+.e-mail p, .adress p {
+	font-weight: bolder;
+}
+
+.e-mail form {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.e-mail textarea {
+	width: 100%;
+	display: block;
+	height: 50%;
+	background-color: #fff;
+	margin: 1em auto;
+}
+
+.e-mail input[type="submit"] {
+	background-color: rgba(255,255,255,0.7);
+	border: 1px dashed red;
+	float: left;
+}
+
+.e-mail input[type="submit"]:hover {
+	border: 1px solid red;
+	background-color: red;
+	color: #fff;
+}
+
+.e-mail input[type="reset"] {
+	background-color: rgba(255,255,255,0.7);
+	border: 1px dashed blue;
+	float: right;
+}
+
+.e-mail input[type="reset"]:hover {
+	border: 1px solid blue;
+	background-color: blue;
+	color: #fff;
+}
+
+.adress iframe { /*google-map*/
+	height: 80%;
+}
+
+/*3) отсек футера:*/
+.footer {
+	background-color: rgba(124,146,133,0.6);
+	border-top: 1px dashed red;
+
+}
+
+.footer .logo {
+	padding: 1em 0 0 0;
+}
+
+.footer object{
+	width: 50%;
+	height: auto;
+	margin: 0 auto;
+}
+
+.socSet li {  /*кнопки социальных сетей*/
+  display: inline-block;
+}
+
+/*default grid - mobile first - end*/
+
+
+/*grid - для планшетов - start*/
+@media screen and (min-width: 512px) {
+	.container .cols.col-m-1 {width: 8.333333%;}
+	.container .cols.col-m-2 {width: 16.666666%;}
+	.container .cols.col-m-3 {width: 25%;}
+	.container .cols.col-m-4 {width: 33.333333%;}
+	.container .cols.col-m-5 {width: 41.666666%;}
+	.container .cols.col-m-6 {width: 50%;}
+	.container .cols.col-m-7 {width: 58.333333%;}
+	.container .cols.col-m-8 {width: 66.666666%;}
+	.container .cols.col-m-9 {width: 75%;}
+	.container .cols.col-m-10 {width: 83.333333%;}
+	.container .cols.col-m-11 {width: 91.666666%;}
+	.container .cols.col-m-12 {width: 100%;}
+	
+	.footer object{
+		width: 100%;
+		height: auto;
+	}
+
+	/*nav fixed styles:*/
+	.nav.fixed ul .nav1,
+	.nav.fixed ul .nav2,
+	.nav.fixed ul .nav3,
+	.nav.fixed ul .nav4 {
+		display: inline-block;
+	}
+
+	.nav.fixed ul li a,
+	.nav.fixed ul li a:active {
+		display: inline-block;
+	}
+
+	.nav.fixed {
+		width: 90%;
+		text-align: center;
+		position: fixed;
+		padding: 0;
+		margin: 0;
+	}
+
+	.nav.fixed  ul {
+		background-color: rgba(255, 0, 0, 0.5);
+		padding: 0;	
+	}
+
+	.nav.fixed li {
+		margin: 0.5em;
+		display: inline-block;
+	}
+
+	.nav.fixed li a {
+		color: #fff;
+		border:none;
+		outline: none;
+		/*font-weight: bolder;*/
+		background: transparent;	
+	}
+
+	.nav.fixed li a:hover, 
+	.nav.fixed li a:focus {
+		border:none;
+		outline: none;	
+	}
+
+	.nav.fixed .nav5 {
+		display: inline-block;
+	}
+
+	.nav.fixed .nav5 a {
+		width: 1.5em;
+		height: 1.5em;
+	}
+
+	.nav.fixed .nav5 a img {
+		width: inherit;
+	}
+}
+/*Для планшетов - end*/
+
+
+
+/*grid for full screens - start*/
+@media screen and (min-width: 800px) {
+	.container .cols.col-1 {width: 8.333333%;}
+	.container .cols.col-2 {width: 16.666666%;}
+	.container .cols.col-3 {width: 25%;}
+	.container .cols.col-4 {width: 33.333333%;}
+	.container .cols.col-5 {width: 41.666666%;}
+	.container .cols.col-6 {width: 50%;}
+	.container .cols.col-7 {width: 58.333333%;}
+	.container .cols.col-8 {width: 66.666666%;}
+	.container .cols.col-9 {width: 75%;}
+	.container .cols.col-10 {width: 83.333333%;}
+	.container .cols.col-11 {width: 91.666666%;}
+	.container .cols.col-12 {width: 100%;}
+	
+	.container .page {
+		height: 100%;
+	}
+
+	/*хедер - старт*/
+	.header {
+		height: 45%;
+	}
+
+	/*.header > div {
+		height: 100%;
+	}*/
+
+	.header .logo a {
+		display: block;
+		width: 65%;
+		margin: 0 auto;
+	}
+
+	.header .logo a,
+	.header .logo object {  /*Logo img*/
+		
+	}
+	/*хедер - енд*/
+
+	/*nav styles - start*/
+	/*nav default styles:*/
+	.nav.default {
+		position: relative;
+		height: 100%;
+	}
+
+	.nav.default li {
+		display: inline-block;
+		position: absolute;
+	}
+
+	.nav.default li a {
+		padding: 1em;		
+	}
+
+	.nav.default .nav1 {
+		top: 30%;
+		left: 10%;
+	}
+
+	.nav.default .nav2 {
+		top: 15%;
+		left: 50%;
+	}
+
+	.nav.default .nav3 {
+		top: 45%;
+		left: 75%;
+	}
+
+	.nav.default .nav4 {
+		top: 65%;
+		left: 30%;
+	}
+
+	
+	/*nav fixed styles:*/
+	..nav.fixed ul .nav1,
+	.nav.fixed ul .nav2,
+	.nav.fixed ul .nav3,
+	.nav.fixed ul .nav4 {
+		display: inline-block;
+	}
+
+	.nav.fixed ul li a,
+	.nav.fixed ul li a:active {
+		display: inline-block;
+	}
+	
+	.nav.fixed {
+		width: 90%;
+		text-align: center;
+		position: fixed;
+		padding: 0;
+		margin: 0;
+	}
+
+	.nav.fixed  ul {
+		background-color: rgba(255, 0, 0, 0.5);
+		padding: 0;	
+	}
+
+	.nav.fixed li {
+		margin: 1em;
+		display: inline-block;
+	}
+
+	.nav.fixed li a {
+		color: #fff;
+		border:none;
+		outline: none;
+		/*font-weight: bolder;*/
+		background: transparent;	
+	}
+
+	.nav.fixed li a:hover, 
+	.nav.fixed li a:focus {
+		border:none;
+		outline: none;	
+	}
+
+	.nav.fixed .nav5 {
+		display: inline-block;
+		float: right;
+	}
+
+	.nav.fixed .nav5 a {
+		width: 1.5em;
+		height: 1.5em;
+	}
+
+	.nav.fixed .nav5 a img {
+		width: inherit;
+	}
+
+	.content {
+		height: 100%
+	}
+
+	.footer object{
+		width: 100%;
+		height: 100%;
+	}
+
+	#footer {
+		position: relative;
+		top: -64px;
+	}
+}
+
+/*for full scrins - end

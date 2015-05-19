@@ -27,6 +27,23 @@ $(document).ready(function(){
         $anchorSelector.css('top', fixedHeight);
     });
 
+    // loading of fotos in the galary
+    $('#anchor-galary').click(function() {
+        $('#fotos').load('./galery.html');
+    });
+
+    $('#nature').click(function() {
+        $('#fotos').load('./nature.html');
+    });
+
+    $('#city').click(function() {
+        $('#fotos').load('./city.html');
+    });
+
+    $('#humane').click(function() {
+        $('#fotos').load('./humane.html');
+    });
+
 
     $('#animals').click(function() {
         $('#fotos').load('./cat.html');

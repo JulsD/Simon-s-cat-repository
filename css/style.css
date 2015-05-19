@@ -31,9 +31,8 @@ a, a:focus, a:hover {
 /*общие характеристики для вссего сайта - конец*/
 
 .anchor {
-	position: relative;
+	position: relative;/*для ссылок навигации и регулирования высоты отступа блока на высоту навигации*/
 }
-
 
 /*grids - start*/
 
@@ -238,6 +237,28 @@ a, a:focus, a:hover {
 	background-color: rgba(232,230,161, 0.6);
 }
 
+.galary ul {
+	padding: 0;
+}
+
+.galary ul li {
+	display: inline-block;
+}
+
+.galary ul li button {
+	background: none;
+	text-transform: uppercase;
+	box-shadow: none;
+	font-weight: bold;
+	color: black;
+	border: none;
+} 
+
+.galary ul li button:hover {
+	font-weight: bolder;
+	color: red;
+}
+
 .fotos img {
 	width: 20%;/*foto in galary size*/
 }
@@ -405,6 +426,10 @@ a, a:focus, a:hover {
 	.nav.fixed .nav5 a img {
 		width: inherit;
 	}
+
+	.galary ul li {
+	display: block;	
+	}
 }
 /*Для планшетов - end*/
 
@@ -548,6 +573,10 @@ a, a:focus, a:hover {
 
 	.content {
 		height: 100%
+	}
+
+	.galary ul li {
+	display: block;	
 	}
 
 	.footer object{
